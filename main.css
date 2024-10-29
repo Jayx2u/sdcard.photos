@@ -25,9 +25,9 @@ body {
 }
 
 .subtitle {
-    font-family: "coolvetica", sans-serif;
-    font-weight: 300;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: large;
+    font-size: larger;
     margin-top: 10px;
 }
