@@ -16,11 +16,11 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 5vw;
 }
 
 .title {
-    font-size: 3em;
+    font-size: 6vw;
     margin: 0;
 }
 
@@ -28,6 +28,16 @@ body {
     font-family: "ibm-plex-mono", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: larger;
-    margin-top: 10px;
+    font-size: 2vw;
+    margin-top: 1vh;
+}
+
+@media (max-width: 650px) {
+    .title {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
 }
