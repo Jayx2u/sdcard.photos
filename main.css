@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: "meno-banner", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: xx-large;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 3em;
+    margin: 0;
+}
+
+.subtitle {
+    font-family: "coolvetica", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: large;
+    margin-top: 10px;
+}
