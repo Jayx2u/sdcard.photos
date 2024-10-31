@@ -7,4 +7,4 @@
 - [**homepage**](https://github.com/Jayx2u/sdcard.photos/tree/homepage): In-development homepage
 
 ## ❤️ Acknowledgement
-- [sambecker/exif-photo-blog](https://github.com/sambecker/exif-photo-blog): An amazing and clean photo blog, reporting XIF camera details (aperture, shutter speed, ISO) for each image.
+- [sambecker/exif-photo-blog](https://github.com/sambecker/exif-photo-blog): An amazing and clean photo blog, reporting EXIF camera details (aperture, shutter speed, ISO) for each image.
