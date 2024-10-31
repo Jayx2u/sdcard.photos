@@ -5,7 +5,7 @@ export default function Home() {
         sdcard.photos
       </h1>
       <p className="font-ibm-mono mt-2 text-3vw sm:text-2xl md:text-4xl">
-        A photo blog for a group of friends passionate about photography..
+        A photo blog for a group of friends passionate about photography.
       </p>
       </div>
   );
