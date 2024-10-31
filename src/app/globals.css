@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://use.typekit.net/eqq3mvt.css');
+
+
+.font-serif-italic {
+    font-family: "meno-banner", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.font-ibm-mono {
+  font-family: "ibm-plex-mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
