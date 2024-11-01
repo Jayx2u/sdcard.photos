@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'ibm-mono': ['ibm-plex-mono', 'monospace']
+      },
     },
   },
   plugins: [],
