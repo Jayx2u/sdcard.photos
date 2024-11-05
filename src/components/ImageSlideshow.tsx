@@ -2,9 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
 import { IoMdCamera } from 'react-icons/io';
 
+interface Slide {
+  url: string;
+  title: string;
+  make: string;
+  model: string;
+}
+
 const ImageSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slides, setSlides] = useState([]);
+  const [slides, setSlides] = useState<Slide[]>([]);
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const titleRef = useRef(null);
