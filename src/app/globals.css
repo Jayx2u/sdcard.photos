@@ -22,3 +22,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+}

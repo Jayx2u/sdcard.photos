@@ -3,6 +3,7 @@ import React from 'react';
 const subdomains = [
   'josh.sdcard.photos',
   'brandon.sdcard.photos',
+  'jonathan.sdcard.photos',
 ];
 
 const SubdomainList = () => {

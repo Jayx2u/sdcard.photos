@@ -1,3 +1,6 @@
+// TODO: Add padding between image title and camera make/model
+// TODO: Preload images
+
 import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
 import Image from 'next/image';
