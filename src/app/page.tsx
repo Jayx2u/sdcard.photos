@@ -51,7 +51,7 @@ export default function Home() {
           <footer className="w-full text-left">
             <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
               Maintained with
-              <FaHeart/>
+              <FaHeart className="hover:animate-spin hover:text-red-600"/>
               by
               <a
                 href="https://github.com/Jayx2u"
