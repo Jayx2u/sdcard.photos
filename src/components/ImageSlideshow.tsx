@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
+
 import { IoMdCamera } from 'react-icons/io';
+import { AiFillApple } from 'react-icons/ai';
 
 interface Slide {
   url: string;
@@ -92,9 +94,14 @@ const ImageSlideshow = () => {
           </h2>
           <h3
             ref={cameraRef}
-            className="font-ibm-mono font-regular text-gray-600"
+            className="font-ibm-mono font-regular text-gray-400 flex items-center text-right"
           >
-            <IoMdCamera /> {slides[currentIndex].make} {slides[currentIndex].model}
+            {slides[currentIndex].make === 'Apple' ? (
+              <AiFillApple className="mr-2"/>
+            ) : (
+              <IoMdCamera className="mr-2"/>
+            )}
+            <span className="uppercase">{slides[currentIndex].make} {slides[currentIndex].model}</span>
           </h3>
         </div>
       </div>
