@@ -91,7 +91,7 @@ const ImageSlideshow = () => {
               className="w-full h-full object-cover opacity-0"
             />
             <div
-              className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent gradient-overlay"></div>
+              className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent gradient-overlay"></div>
           </div>
           <h2
             ref={titleRef}
