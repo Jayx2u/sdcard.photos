@@ -5,18 +5,6 @@
 @tailwind utilities;
 
 
-.font-serif-italic {
-    font-family: "meno-banner", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.font-ibm-mono {
-  font-family: "ibm-plex-mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;

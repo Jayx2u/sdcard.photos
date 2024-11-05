@@ -2,46 +2,56 @@
 import { useEffect } from 'react';
 import anime from 'animejs';
 
+import ImageSlideshow from '../components/ImageSlideshow';
+import ImageWrapper from '../components/ImageWrapper'
+
 export default function Home() {
   useEffect(() => {
-    anime({
+    const timeline = anime.timeline({
+      easing: 'easeOutExpo'
+    });
+
+    // Start with title animation
+    timeline.add({
       targets: '.title-path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
       duration: 5000,
-      delay: 300,
       complete: () => {
-        // After logo animation, animate the fill and move everything up (TODO: once faded up, reveal ImageGallery component.)
         anime({
           targets: '.title-path',
           fill: ['rgba(255,255,255,0)', 'rgba(255,255,255,1)'],
           duration: 800,
           easing: 'easeOutExpo'
         });
-
-        anime({
-          targets: '.content-wrapper',
-          translateY: ['0', '-10vh'],
-          duration: 2000,
-          easing: 'easeOutExpo',
-          delay: 300
-        });
       }
-    });
-
-    // Fade in the subtitle separately
-    anime({
+    })
+    // Animate subtitle
+    .add({
       targets: '.subtitle',
       opacity: [0, 1],
       duration: 1000,
       easing: 'easeOutExpo',
-      delay: 2000
-    });
+    }, '-=3300') // Start slightly before title animation ends
+    // Reveal slideshow by transforming down
+    .add({
+      targets: '.slideshow-container',
+      translateY: ['-100%', 0],
+      opacity: [0, 1],
+      duration: 1200,
+      easing: 'easeOutExpo'
+    }, '-=2000'); // Start before subtitle animation ends
   }, []);
 
   return (
-    <div className="flex flex-col justify-center h-screen bg-black text-white px-12">
-      <div className="content-wrapper max-w-6xl mx-auto w-full">
+    <div className="flex flex-col justify-start min-h-screen bg-black text-white overflow-hidden">
+      {/* Slideshow Section - starts hidden above viewport */}
+      <div className="slideshow-container opacity-0 transform -translate-y-full">
+        <ImageSlideshow />
+      </div>
+
+      {/* Text Content Section */}
+      <div className="text-content max-w-6xl mx-auto px-12 mt-8">
         <svg
           className="w-full max-w-[600px] h-auto mb-2"
           viewBox="0 0 307 38"
@@ -60,6 +70,7 @@ export default function Home() {
           A photo blog for a group of friends passionate about photography.
         </p>
       </div>
+      <ImageWrapper />
     </div>
   );
 }
