@@ -7,6 +7,7 @@ import Title from '../components/Title';
 import SubdomainList from '../components/SubdomainList';
 
 import { FaHeart } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 
 export default function Home() {
   useEffect(() => {
@@ -50,23 +51,31 @@ export default function Home() {
           <hr className="my-8 border-gray-600"/>
           <footer className="w-full text-left">
             <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
-              Maintained with
-              <FaHeart className="hover:animate-spin hover:text-red-600"/>
-              by
+              Star this project on
               <a
-                href="https://github.com/Jayx2u"
-                className="hover:text-gray-400 transition-colors hover:font-bold"
+                href="https://github.com/Jayx2u/sdcard.photos"
+                className="hover:text-gray-400 transition-colors hover:font-bold flex items-center gap-2 underline"
               >
-                Jayx2u
-              </a>
-              &
-              <a
-                href="https://github.com/s1072489"
-                className="hover:text-gray-400 transition-colors hover:font-bold"
-              >
-              Deadhello
-              </a>
+              <IoLogoGithub /> Github!</a>
             </p>
+              <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
+                Maintained with
+                <FaHeart className="hover:animate-spin hover:text-red-600"/>
+                by
+                <a
+                  href="https://github.com/Jayx2u"
+                  className="hover:text-gray-400 transition-colors hover:font-bold underline"
+                >
+                  Jayx2u
+                </a>
+                &
+                <a
+                  href="https://github.com/s1072489"
+                  className="hover:text-gray-400 transition-colors hover:font-bold underline"
+                >
+                  Deadhello
+                </a>
+              </p>
           </footer>
         </div>
       </div>
