@@ -74,7 +74,7 @@ const ImageSlideshow = () => {
   }, [currentIndex, slides]);
 
   if (slides.length === 0) {
-    return <div>Loading...</div>;
+    return <div className="font-ibm-mono">Loading...</div>;
   }
 
   return (
