@@ -38,7 +38,7 @@ const ImageSlideshow = () => {
     return anime.timeline({
       easing: 'easeInOutQuad',
     }).add({
-      targets: [imageRef.current, titleRef.current, cameraRef.current],
+      targets: [imageRef.current, titleRef.current, cameraRef.current, '.gradient-overlay'],
       opacity: 0,
       translateY: 20,
       duration: 1000,
@@ -49,7 +49,7 @@ const ImageSlideshow = () => {
     return anime.timeline({
       easing: 'easeInOutQuad',
     }).add({
-      targets: [imageRef.current, titleRef.current, cameraRef.current],
+      targets: [imageRef.current, titleRef.current, cameraRef.current, '.gradient-overlay'],
       opacity: [0, 1],
       translateY: [-20, 0],
       duration: 1000,
@@ -81,23 +81,27 @@ const ImageSlideshow = () => {
         className="max-w-6xl mx-auto px-12"
       >
         <div className="relative aspect-[16/9] w-full">
-          <Image
-            ref={imageRef}
-            src={slides[currentIndex].url}
-            alt={slides[currentIndex].title}
-            layout="fill"
-            objectFit="cover"
-            className="opacity-0"
-          />
+          <div className="relative w-full h-full">
+            <Image
+              ref={imageRef}
+              src={slides[currentIndex].url}
+              alt={slides[currentIndex].title}
+              layout="fill"
+              objectFit="cover"
+              className="w-full h-full object-cover opacity-0"
+            />
+            <div
+              className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent gradient-overlay"></div>
+          </div>
           <h2
             ref={titleRef}
-            className="font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl mt-4 opacity-0 uppercase"
+            className="absolute bottom-4 left-4 font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl mt-4 opacity-0 uppercase"
           >
             {slides[currentIndex].title}
           </h2>
           <h3
             ref={cameraRef}
-            className="font-ibm-mono font-regular text-gray-400 flex items-center text-right"
+            className="absolute bottom-4 right-4 font-ibm-mono font-regular text-gray-400 flex items-center text-right opacity-0"
           >
             {slides[currentIndex].make === 'Apple' ? (
               <AiFillApple className="mr-2"/>
