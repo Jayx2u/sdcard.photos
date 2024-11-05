@@ -14,12 +14,13 @@ export default function Home() {
       easing: 'easeOutExpo'
     });
 
-    // Animate subtitle
+    // Animate text content
     timeline.add({
-      targets: '.subtitle',
+      targets: '.text-content',
       opacity: [0, 1],
-      duration: 1000,
+      duration: 2000,
       easing: 'easeOutExpo',
+      delay: 300,
     }, '') // Start slightly before title animation ends
     // Reveal slideshow by transforming down
     .add({
@@ -27,8 +28,9 @@ export default function Home() {
       translateY: ['-100%', 0],
       opacity: [0, 1],
       duration: 1200,
-      easing: 'easeOutExpo'
-    }, '-=2000'); // Start before subtitle animation ends
+      easing: 'easeOutExpo',
+      delay: 300,
+    }, '-=2000');
   }, []);
 
   return (
@@ -36,7 +38,7 @@ export default function Home() {
       {/* Text Content Section */}
       <div className="text-content max-w-6xl mx-auto px-12 md:w-1/2">
         <Title/>
-        <p className="subtitle opacity-0 font-ibm-mono text-lg sm:text-2xl md:text-4xl mt-2">
+        <p className="subtitle font-ibm-mono text-lg sm:text-2xl md:text-4xl mt-2">
           A photo blog for a group of friends passionate about photography.
         </p>
         <hr className="my-8 border-gray-600"/>

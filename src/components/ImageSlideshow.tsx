@@ -98,7 +98,7 @@ const ImageSlideshow = () => {
           </div>
           <h2
             ref={titleRef}
-            className="absolute bottom-4 left-4 font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl mt-4 opacity-0 uppercase"
+            className="absolute bottom-4 left-4 font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl text-left mt-4 opacity-0 uppercase"
           >
             {slides[currentIndex].title}
           </h2>
