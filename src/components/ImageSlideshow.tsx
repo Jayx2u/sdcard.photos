@@ -98,13 +98,13 @@ const ImageSlideshow = () => {
           </div>
           <h2
             ref={titleRef}
-            className="absolute bottom-4 left-4 font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl text-left mt-4 opacity-0 uppercase"
+            className="absolute bottom-4 left-4 font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl text-left mt-4 opacity-0 uppercase max-w-[70%]"
           >
             {slides[currentIndex].title}
           </h2>
           <h3
             ref={cameraRef}
-            className="absolute bottom-4 right-4 font-ibm-mono font-regular text-gray-400 flex items-center text-right opacity-0"
+            className="absolute bottom-4 right-4 font-ibm-mono font-regular text-gray-400 flex items-center text-right opacity-0 text-xs sm:text-xs md:text-sm"
           >
             {slides[currentIndex].make === 'Apple' ? (
               <AiFillApple className="mr-2"/>
