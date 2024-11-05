@@ -49,7 +49,24 @@ export default function Home() {
           <SubdomainList />
           <hr className="my-8 border-gray-600"/>
           <footer className="w-full text-left">
-            <p className="font-ibm-mono text-gray-600 inline-flex">Maintained with <FaHeart className="m-2"/> by Jayx2u & Deadhello</p>
+            <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
+              Maintained with
+              <FaHeart/>
+              by
+              <a
+                href="https://github.com/Jayx2u"
+                className="hover:text-gray-400 transition-colors hover:font-bold"
+              >
+                Jayx2u
+              </a>
+              &
+              <a
+                href="https://github.com/s1072489"
+                className="hover:text-gray-400 transition-colors hover:font-bold"
+              >
+              Deadhello
+              </a>
+            </p>
           </footer>
         </div>
       </div>
