@@ -4,6 +4,9 @@ import anime from 'animejs';
 
 import ImageSlideshow from '../components/ImageSlideshow';
 import Title from '../components/Title';
+import SubdomainList from '../components/SubdomainList';
+
+import { FaHeart } from "react-icons/fa";
 
 export default function Home() {
   useEffect(() => {
@@ -38,7 +41,14 @@ export default function Home() {
         </p>
         <hr className="my-8 border-gray-600"/>
         <div className="info mt-8 pb-8">
-            <p className="font-ibm-mono text-gray-400">An invite-only website where each member gets their own photo blog on a unique subdomain. If you have connections to the maintainers, contact us and we&apos;ll set you up with a photo blog :)</p>
+          <p className="font-ibm-mono text-gray-400">An invite-only website where each member gets their own photo blog
+            on a unique subdomain. If you have connections to the maintainers, contact us and we&apos;ll set you up with
+            a photo blog :)</p>
+          <SubdomainList />
+          <hr className="my-8 border-gray-600"/>
+          <footer className="w-full text-left">
+            <p className="font-ibm-mono text-gray-600 inline-flex">Maintained with <FaHeart className="m-2"/> by Jayx2u & Deadhello</p>
+          </footer>
         </div>
       </div>
 

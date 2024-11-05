@@ -59,7 +59,7 @@ const ImageSlideshow = () => {
     if (slides.length > 0) {
       const animate = async () => {
         await animateIn().finished;
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise(resolve => setTimeout(resolve, 5000));
         await animateOut().finished;
 
         setCurrentIndex((prev) => (prev + 1) % slides.length);
