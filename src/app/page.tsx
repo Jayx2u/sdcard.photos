@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import anime from 'animejs';
 
 import ImageSlideshow from '../components/ImageSlideshow';
-import ImageWrapper from '../components/ImageWrapper'
 
 export default function Home() {
   useEffect(() => {
@@ -70,7 +69,6 @@ export default function Home() {
           A photo blog for a group of friends passionate about photography.
         </p>
       </div>
-      <ImageWrapper />
     </div>
   );
 }

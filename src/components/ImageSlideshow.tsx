@@ -1,33 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
-
 import { IoMdCamera } from 'react-icons/io';
 
 const ImageSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slides, setSlides] = useState([]);
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const titleRef = useRef(null);
-  const cameraRef = useRef(null)
+  const cameraRef = useRef(null);
 
-  // TODO: Replace with images from db with 'fav' tag
-  const slides = [
-    {
-      image: "../images/img.png",
-      title: "title here hahahaahah",
-      camera: "Apple",
-    },
-    {
-      image: "../images/img.png",
-      title: "City Skyline",
-      camera: "SONY",
-    },
-    {
-      image: "../images/img.png",
-      title: "Ocean Sunset",
-      camera: "Samgsung",
-    }
-  ];
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('/api/photos');
+        const data = await response.json();
+        setSlides(data.images);
+      } catch (error) {
+        console.error('Failed to fetch images:', error);
+      }
+    };
+
+    fetchImages();
+  }, []);
 
   const animateOut = () => {
     return anime.timeline({
@@ -52,16 +47,22 @@ const ImageSlideshow = () => {
   };
 
   useEffect(() => {
-    const animate = async () => {
-      await animateIn().finished;
-      await new Promise(resolve => setTimeout(resolve, 3000));
-      await animateOut().finished;
+    if (slides.length > 0) {
+      const animate = async () => {
+        await animateIn().finished;
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        await animateOut().finished;
 
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
-    };
+        setCurrentIndex((prev) => (prev + 1) % slides.length);
+      };
 
-    animate();
-  }, [currentIndex]);
+      animate();
+    }
+  }, [currentIndex, slides]);
+
+  if (slides.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="w-full bg-black">
@@ -72,7 +73,7 @@ const ImageSlideshow = () => {
         <div className="relative aspect-[16/9] w-full">
           <img
             ref={imageRef}
-            src={slides[currentIndex].image}
+            src={slides[currentIndex].url}
             alt={slides[currentIndex].title}
             className="w-full h-full object-cover opacity-0"
           />
@@ -86,7 +87,7 @@ const ImageSlideshow = () => {
             ref={cameraRef}
             className="font-ibm-mono font-regular text-gray-600"
           >
-            <IoMdCamera /> {slides[currentIndex].camera}
+            <IoMdCamera /> {slides[currentIndex].make} {slides[currentIndex].model}
           </h3>
         </div>
       </div>
