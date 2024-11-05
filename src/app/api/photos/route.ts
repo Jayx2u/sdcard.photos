@@ -1,12 +1,14 @@
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 
+export const revalidate = 60;
+
 export async function GET() {
   try {
     const { rows } = await sql`
       SELECT url, title, make, model, taken_at_naive
       FROM photos
-      ORDER BY taken_at_naive DESC
+      ORDER BY random()
       LIMIT 50
     `;
 

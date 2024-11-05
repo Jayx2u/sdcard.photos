@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
+import Image from 'next/image';
 
 import { IoMdCamera } from 'react-icons/io';
 import { AiFillApple } from 'react-icons/ai';
@@ -80,11 +81,13 @@ const ImageSlideshow = () => {
         className="max-w-6xl mx-auto px-12"
       >
         <div className="relative aspect-[16/9] w-full">
-          <img
+          <Image
             ref={imageRef}
             src={slides[currentIndex].url}
             alt={slides[currentIndex].title}
-            className="w-full h-full object-cover opacity-0"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-0"
           />
           <h2
             ref={titleRef}
