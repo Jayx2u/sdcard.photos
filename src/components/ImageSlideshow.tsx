@@ -63,11 +63,17 @@ const ImageSlideshow = () => {
         await animateOut().finished;
 
         const nextIndex = (currentIndex + 1) % slides.length;
-        setNextImageUrl(slides[nextIndex]?.url || null);
         setCurrentIndex(nextIndex);
       };
 
       animate();
+    }
+  }, [currentIndex, slides]);
+
+  useEffect(() => {
+    if (slides.length > 0) {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      setNextImageUrl(slides[nextIndex]?.url || null);
     }
   }, [currentIndex, slides]);
 
