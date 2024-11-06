@@ -54,33 +54,38 @@ export default function Home() {
             a photo blog :)</p>
           <SubdomainList />
           <hr className="my-8 border-gray-600"/>
-          <footer className="w-full text-left">
-            <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
-              Star this project on
+          <footer className="font-ibm-mono space-y-1 pb-8">
+            <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
+              <span>Star this project on</span>
               <a
                 href="https://github.com/Jayx2u/sdcard.photos"
-                className="hover:text-gray-400 transition-colors hover:font-bold flex items-center gap-2 underline"
+                className="inline-flex items-center gap-1 hover:text-gray-400 transition-colors underline"
               >
-              <IoLogoGithub />Github!</a>
-            </p>
-              <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
-                Maintained with
-                <FaHeart className="hover:animate-spin hover:text-red-600"/>
-                by
+                <IoLogoGithub className="text-lg"/>
+                <span>Github!</span>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
+              <span>Maintained with</span>
+              <FaHeart className="hover:animate-spin hover:text-red-600"/>
+              <span>by</span>
+              <div className="inline-flex flex-wrap items-center gap-x-2">
                 <a
                   href="https://github.com/Jayx2u"
-                  className="hover:text-gray-400 transition-colors hover:font-bold underline"
+                  className="hover:text-gray-400 transition-colors underline"
                 >
                   Jayx2u
                 </a>
-                &
+                <span>&</span>
                 <a
                   href="https://github.com/s1072489"
-                  className="hover:text-gray-400 transition-colors hover:font-bold underline"
+                  className="hover:text-gray-400 transition-colors underline"
                 >
                   Deadhello
                 </a>
-              </p>
+              </div>
+            </div>
           </footer>
         </div>
       </div>
