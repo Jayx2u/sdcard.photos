@@ -56,6 +56,15 @@ export default function Home() {
           <hr className="my-8 border-gray-600"/>
           <footer className="font-ibm-mono space-y-1 pb-8">
             <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
+              All photos shown are from
+              <a
+                href="https://josh.sdcard.photos/"
+                className="hover:text-gray-400 transition-colors underline"
+              >
+                Josh
+              </a>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
               <span>Star this project on</span>
               <a
                 href="https://github.com/Jayx2u/sdcard.photos"
