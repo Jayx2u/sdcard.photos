@@ -97,7 +97,7 @@ const ImageSlideshow = () => {
                 alt="Next image"
                 layout="fill"
                 objectFit="cover"
-                priority
+                priority={true}
                 className="hidden"
               />
             )}
