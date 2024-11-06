@@ -1,6 +1,3 @@
-// TODO: Add padding between image title and camera make/model
-// TODO: Preload images
-
 import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
 import Image from 'next/image';
@@ -29,10 +26,16 @@ const ImageSlideshow = () => {
     const loadImages = async () => {
       const images = await fetchImages();
       setSlides(images);
+      preloadImage(images[1]);
     };
 
     loadImages();
   }, []);
+
+  const preloadImage = (image: Slide) => {
+    const img = new window.Image();
+    img.src = image.url;
+  };
 
   const animateOut = () => {
     return anime.timeline({
@@ -63,7 +66,9 @@ const ImageSlideshow = () => {
         await new Promise(resolve => setTimeout(resolve, 5000));
         await animateOut().finished;
 
-        setCurrentIndex((prev) => (prev + 1) % slides.length);
+        const nextIndex = (currentIndex + 1) % slides.length;
+        preloadImage(slides[nextIndex]);
+        setCurrentIndex(nextIndex);
       };
 
       animate();
