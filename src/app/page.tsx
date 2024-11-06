@@ -36,8 +36,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row justify-start min-h-screen bg-black text-white mt-16 overflow-hidden">
+      {/* Slideshow Section */}
+      <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-6">
+        <ImageSlideshow/>
+      </div>
+
       {/* Text Content Section */}
-      <div className="text-content max-w-6xl mx-auto px-12 md:w-1/2">
+      <div className="text-content max-w-6xl mx-auto px-12 md:w-1/2 order-2 md:order-1">
         <Title/>
         <p className="subtitle font-ibm-mono text-lg sm:text-2xl md:text-4xl mt-2">
           A photo blog for a group of friends passionate about photography.
@@ -78,11 +83,6 @@ export default function Home() {
               </p>
           </footer>
         </div>
-      </div>
-
-      {/* Slideshow Section */}
-      <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2">
-        <ImageSlideshow/>
       </div>
     </div>
   );
