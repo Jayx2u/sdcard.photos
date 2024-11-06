@@ -19,7 +19,7 @@ export default function Home() {
     timeline.add({
       targets: '.text-content',
       opacity: [0, 1],
-      duration: 2000,
+      duration: 3000,
       easing: 'easeOutExpo',
       delay: 300,
     }, '') // Start slightly before title animation ends
@@ -42,7 +42,7 @@ export default function Home() {
       </div>
 
       {/* Text Content Section */}
-      <div className="text-content max-w-6xl mx-auto px-12 md:w-1/2 order-2 md:order-1">
+      <div className="text-content opacity-0 max-w-6xl mx-auto px-12 md:w-1/2 order-2 md:order-1">
         <Title/>
         <p className="subtitle font-ibm-mono text-lg sm:text-2xl md:text-4xl mt-2">
           A photo blog for a group of friends passionate about photography.
