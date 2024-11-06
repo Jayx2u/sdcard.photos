@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="flex flex-col md:flex-row justify-start min-h-screen bg-black text-white mt-16 overflow-hidden">
       {/* Slideshow Section */}
-      <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-6">
+      <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-10">
         <ImageSlideshow/>
       </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
         </p>
         <hr className="my-8 border-gray-600"/>
         <div className="info mt-8 pb-8">
-          <p className="font-ibm-mono text-gray-400">An invite-only website where each member gets their own photo blog
+          <p className="font-ibm-mono text-gray-400">An invite-only service where each member gets their own photo blog
             on a unique subdomain. If you have connections to the maintainers, contact us and we&apos;ll set you up with
             a photo blog :)</p>
           <SubdomainList />
