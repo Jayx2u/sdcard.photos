@@ -1,6 +1,7 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import anime from 'animejs';
+import Confetti from 'react-confetti';
 
 import ImageSlideshow from '../components/ImageSlideshow';
 import Title from '../components/Title';
@@ -10,6 +11,9 @@ import { FaHeart } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 
 export default function Home() {
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+
   useEffect(() => {
     const timeline = anime.timeline({
       easing: 'easeOutExpo'
@@ -34,8 +38,24 @@ export default function Home() {
     }, '-=2000');
   }, []);
 
+  const handleMouseEnter = () => {
+    const timeout = setTimeout(() => {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 3000); // Hide confetti after 3 seconds
+    }, 3000); // 3 seconds delay
+    setHoverTimeout(timeout);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+  };
+
   return (
     <div className="flex flex-col md:flex-row justify-start min-h-screen bg-black text-white mt-16 overflow-hidden">
+      {showConfetti && <Confetti />}
       {/* Slideshow Section */}
       <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-10">
         <ImageSlideshow/>
@@ -77,7 +97,11 @@ export default function Home() {
 
             <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
               <span>Maintained with</span>
-              <FaHeart className="hover:animate-spin hover:text-red-600"/>
+              <FaHeart
+                className="hover:animate-spin hover:text-red-600"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
               <span>by</span>
               <div className="inline-flex flex-wrap items-center gap-x-2">
                 <a
