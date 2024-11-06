@@ -89,6 +89,7 @@ const ImageSlideshow = () => {
               alt={slides[currentIndex].title}
               layout="fill"
               objectFit="cover"
+              priority={true}
               className="w-full h-full object-cover opacity-0"
             />
             {nextImageUrl && (
