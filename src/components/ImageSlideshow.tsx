@@ -17,6 +17,7 @@ interface Slide {
 const ImageSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slides, setSlides] = useState<Slide[]>([]);
+  const [nextImageUrl, setNextImageUrl] = useState<string | null>(null);
   const containerRef = useRef(null);
   const imageRef = useRef(null);
   const titleRef = useRef(null);
@@ -26,16 +27,11 @@ const ImageSlideshow = () => {
     const loadImages = async () => {
       const images = await fetchImages();
       setSlides(images);
-      preloadImage(images[1]);
+      setNextImageUrl(images[1]?.url || null);
     };
 
     loadImages();
   }, []);
-
-  const preloadImage = (image: Slide) => {
-    const img = new window.Image();
-    img.src = image.url;
-  };
 
   const animateOut = () => {
     return anime.timeline({
@@ -67,7 +63,7 @@ const ImageSlideshow = () => {
         await animateOut().finished;
 
         const nextIndex = (currentIndex + 1) % slides.length;
-        preloadImage(slides[nextIndex]);
+        setNextImageUrl(slides[nextIndex]?.url || null);
         setCurrentIndex(nextIndex);
       };
 
@@ -95,6 +91,16 @@ const ImageSlideshow = () => {
               objectFit="cover"
               className="w-full h-full object-cover opacity-0"
             />
+            {nextImageUrl && (
+              <Image
+                src={nextImageUrl}
+                alt="Next image"
+                layout="fill"
+                objectFit="cover"
+                priority
+                className="hidden"
+              />
+            )}
             <div
               className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent gradient-overlay"></div>
           </div>
