@@ -56,7 +56,7 @@ export default function Home() {
                 href="https://github.com/Jayx2u/sdcard.photos"
                 className="hover:text-gray-400 transition-colors hover:font-bold flex items-center gap-2 underline"
               >
-              <IoLogoGithub /> Github!</a>
+              <IoLogoGithub />Github!</a>
             </p>
               <p className="font-ibm-mono text-gray-600 flex items-center gap-2">
                 Maintained with

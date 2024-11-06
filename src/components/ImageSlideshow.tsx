@@ -5,6 +5,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import anime from 'animejs';
 import Image from 'next/image';
 
+import { fetchImages } from '@/photo/FetchImages';
+
 import { IoMdCamera } from 'react-icons/io';
 import { AiFillApple } from 'react-icons/ai';
 
@@ -24,17 +26,12 @@ const ImageSlideshow = () => {
   const cameraRef = useRef(null);
 
   useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch('/api/photos');
-        const data = await response.json();
-        setSlides(data.images);
-      } catch (error) {
-        console.error('Failed to fetch images:', error);
-      }
+    const loadImages = async () => {
+      const images = await fetchImages();
+      setSlides(images);
     };
 
-    fetchImages();
+    loadImages();
   }, []);
 
   const animateOut = () => {
