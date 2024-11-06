@@ -93,23 +93,28 @@ const ImageSlideshow = () => {
             <div
               className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent gradient-overlay"></div>
           </div>
-          <h2
-            ref={titleRef}
-            className="absolute bottom-4 left-4 font-ibm-mono font-bold text-white text-xs sm:text-xs md:text-4xl text-left mt-4 opacity-0 uppercase max-w-[70%]"
-          >
-            {slides[currentIndex].title}
-          </h2>
-          <h3
-            ref={cameraRef}
-            className="absolute bottom-4 right-4 font-ibm-mono font-regular text-gray-400 flex items-center text-right opacity-0 text-xs sm:text-xs md:text-sm"
-          >
-            {slides[currentIndex].make === 'Apple' ? (
-              <AiFillApple className="mr-2"/>
-            ) : (
-              <IoMdCamera className="mr-2"/>
-            )}
-            <span className="uppercase">{slides[currentIndex].make} {slides[currentIndex].model}</span>
-          </h3>
+          <div
+            className="absolute bottom-0 left-0 w-full p-4 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
+            <h2
+              ref={titleRef}
+              className="font-ibm-mono font-bold text-white text-sm sm:text-base md:text-2xl lg:text-4xl uppercase max-w-full sm:max-w-[70%] opacity-0 leading-tight"
+            >
+              {slides[currentIndex].title}
+            </h2>
+            <h3
+              ref={cameraRef}
+              className="font-ibm-mono font-regular text-gray-400 flex items-center text-xs sm:text-sm opacity-0 whitespace-nowrap"
+            >
+              {slides[currentIndex].make === 'Apple' ? (
+                <AiFillApple className="mr-2 flex-shrink-0"/>
+              ) : (
+                <IoMdCamera className="mr-2 flex-shrink-0"/>
+              )}
+              <span className="uppercase truncate">
+            {slides[currentIndex].make} {slides[currentIndex].model}
+          </span>
+            </h3>
+          </div>
         </div>
       </div>
     </div>
