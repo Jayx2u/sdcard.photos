@@ -11,7 +11,7 @@ const Title = () => {
       targets: '.title-path',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      duration: 12500,
+      duration: 14000,
       delay: 100,
     });
   }, []);
