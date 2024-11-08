@@ -23,10 +23,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex flex-col md:flex-row items-center font-ibm-mono pb-8 gap-4">
+    <footer className="flex flex-col md:flex-row font-ibm-mono pb-8 gap-6">
       {showConfetti && <Confetti />}
       <div className="flex-shrink-0">
-        <svg width="253" height="93" viewBox="0 0 253 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="h-20 w-auto" width="253" height="93" viewBox="0 0 253 93" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd"
                 d="M149.122 43.67L149.004 50.467C148.974 51.4283 148.724 52.0525 148.14 52.3388C147.691 52.5591 144.197 53.3826 140.917 52.3741C139.178 54.7314 137.018 56.4594 134.729 57.5826C127.232 61.2607 117.949 58.6867 114.403 51.4597C111.76 46.0732 111.766 36.4355 120.653 32.0746C122.898 30.9734 125.34 30.3879 127.465 30.2921C127.58 29.8457 127.918 29.5128 128.456 29.2485L128.681 29.1384L136.777 26.0014C137.988 25.5186 138.588 25.9479 138.853 26.4866L138.963 26.711C139.037 26.9492 139.112 27.1868 139.186 27.4238C140.479 31.5574 141.705 35.4784 143.08 38.2803C144.402 40.9736 145.842 42.6615 147.653 42.7198C148.212 42.724 148.838 42.7511 149.058 43.1999C149.102 43.2897 149.124 43.4464 149.122 43.67ZM132.265 43.1411C132.948 44.5326 133.655 45.7454 134.362 46.8464C133.55 47.8019 132.65 48.466 131.797 48.8844C128.88 50.3161 126.072 49.0204 124.839 46.5067C123.715 44.2174 123.943 40.7084 126.771 39.3208C128.073 38.6821 129.593 38.7159 130.572 39.3493C131.143 40.74 131.693 41.974 132.265 43.1411Z"
                 fill="black" stroke="black" strokeWidth="15"/>
@@ -402,7 +402,7 @@ export default function Footer() {
             fill="black"/>
         </svg>
       </div>
-      <div className="text-center md:text-left">
+      <div className="text-left">
         <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
           All photos shown are from
           <a
