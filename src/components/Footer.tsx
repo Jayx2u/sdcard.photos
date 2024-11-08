@@ -23,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex flex-col md:flex-row font-ibm-mono pb-8 gap-6">
+    <footer className="flex flex-col lg:flex-row font-ibm-mono pb-8 gap-6">
       {showConfetti && <Confetti />}
       <div className="flex-shrink-0">
         <svg className="h-20 w-auto" width="253" height="93" viewBox="0 0 253 93" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -402,7 +402,7 @@ export default function Footer() {
             fill="black"/>
         </svg>
       </div>
-      <div className="text-left">
+      <div className="text-left w-full">
         <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
           All photos shown are from
           <a
