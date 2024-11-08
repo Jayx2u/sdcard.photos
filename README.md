@@ -14,7 +14,32 @@ their individual photography, with the sdcard.photos landing page acting as a ce
 - _There's also a lil' easter egg hidden in the landing page, can you find it? 🤔_
 
 ## ⬇️ API for Fetching Photos
-![Photo of API Response](https://cloud-4u02e813y-hack-club-bot.vercel.app/0image.png)
+```
+{
+  "images": [
+    {
+      "url": "https://joshbucket.sdcard.photos/photo-ohwECiDo59EmaRMZ.jpg",
+      "title": "Plains Zebra & Birds",
+      "make": "SONY",
+      "model": "DSC-RX10M3",
+      "taken_at_naive": "2018-08-25 22:04:53"
+    },
+    {
+      "url": "https://joshbucket.sdcard.photos/photo-3NWmlEFXhNSfW8Hm.jpg",
+      "title": "Vulture's Vigil: Lions in the Golden Grassland",
+      "make": "SONY",
+      "model": "DSC-RX10M3",
+      "taken_at_naive": "2018-08-22 13:04:03"
+    },
+    {
+      "url": "https://joshbucket.sdcard.photos/photo-5vEcbjvjVg4qaoyV.jpg",
+      "title": "Lion Eating",
+      "make": "SONY",
+      "model": "DSC-RX10M3",
+      "taken_at_naive": "2018-08-22 13:21:47"
+    },
+...
+```
 
 ## ❤️ Acknowledgement
 
