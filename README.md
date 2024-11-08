@@ -1,4 +1,4 @@
-![Banner](https://hackclub.slack.com/archives/C016DEDUL87/p1731064760220129?thread_ts=1731064755.806739&cid=C016DEDUL87)
+![Banner](https://cloud-ctv2ma97y-hack-club-bot.vercel.app/0github_header.png)
 ## 🚀 About
 **sdcard.photos** is a photo blog for a group of friends passionate about photography. Each person has their own subdomain allowing them to showcase their photographs. The actual photo blog uses [sambecker/exif-photo-blog](https://github.com/sambecker/exif-photo-blog) but this project aims to create a homepage that showcases photos uploaded by the group all in one page.
 
