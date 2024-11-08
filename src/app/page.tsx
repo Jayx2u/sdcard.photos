@@ -1,18 +1,13 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import anime from 'animejs';
-import Confetti from 'react-confetti';
 
 import ImageSlideshow from '../components/ImageSlideshow';
 import Title from '../components/Title';
 import SubdomainList from '../components/SubdomainList';
-
-import { FaHeart } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io";
+import Footer from '../components/Footer';
 
 export default function Home() {
-  const [showConfetti, setShowConfetti] = useState(false);
-  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const timeline = anime.timeline({
@@ -38,24 +33,8 @@ export default function Home() {
     }, '-=2000');
   }, []);
 
-  const handleMouseEnter = () => {
-    const timeout = setTimeout(() => {
-      setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 3000); // Hide confetti after 3 seconds
-    }, 3000); // 3 seconds delay
-    setHoverTimeout(timeout);
-  };
-
-  const handleMouseLeave = () => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-      setHoverTimeout(null);
-    }
-  };
-
   return (
     <div className="flex flex-col md:flex-row justify-start min-h-screen bg-black text-white mt-16 overflow-hidden">
-      {showConfetti && <Confetti />}
       {/* Slideshow Section */}
       <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-10">
         <ImageSlideshow/>
@@ -74,52 +53,7 @@ export default function Home() {
             a photo blog :)</p>
           <SubdomainList />
           <hr className="my-8 border-gray-600"/>
-          <footer className="font-ibm-mono space-y-1 pb-8">
-            <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
-              All photos shown are from
-              <a
-                href="https://josh.sdcard.photos/"
-                className="hover:text-gray-400 transition-colors underline"
-              >
-                Josh
-              </a>
-            </div>
-            <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
-              <span>Star this project on</span>
-              <a
-                href="https://github.com/Jayx2u/sdcard.photos"
-                className="inline-flex items-center gap-1 hover:text-gray-400 transition-colors underline"
-              >
-                <IoLogoGithub className="text-lg"/>
-                <span>Github!</span>
-              </a>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
-              <span>Maintained with</span>
-              <FaHeart
-                className="hover:animate-spin hover:text-red-600"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              />
-              <span>by</span>
-              <div className="inline-flex flex-wrap items-center gap-x-2">
-                <a
-                  href="https://github.com/Jayx2u"
-                  className="hover:text-gray-400 transition-colors underline"
-                >
-                  Jayx2u
-                </a>
-                <span>&</span>
-                <a
-                  href="https://github.com/s1072489"
-                  className="hover:text-gray-400 transition-colors underline"
-                >
-                  Deadhello
-                </a>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     </div>
