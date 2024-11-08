@@ -14,6 +14,7 @@ their individual photography, with the sdcard.photos landing page acting as a ce
 - _There's also a lil' easter egg hidden in the landing page, can you find it? 🤔_
 
 ## ⬇️ API for Fetching Photos
+From https://sdcard.photos/api/photos
 ```
 {
   "images": [
