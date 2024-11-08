@@ -93,8 +93,9 @@ const ImageSlideshow = () => {
               ref={imageRef}
               src={slides[currentIndex].url}
               alt={slides[currentIndex].title}
-              layout="fill"
-              objectFit="cover"
+              sizes="(min-width: 1200px) 1200px, 100vw"
+              fill={true}
+              style={{ objectFit: 'cover' }}
               priority={true}
               className="w-full h-full object-cover opacity-0"
             />
@@ -102,8 +103,9 @@ const ImageSlideshow = () => {
               <Image
                 src={nextImageUrl}
                 alt="Next image"
-                layout="fill"
-                objectFit="cover"
+                sizes="(min-width: 1200px) 1200px, 100vw"
+                fill={true}
+                style={{ objectFit: 'cover' }}
                 priority={true}
                 className="hidden"
               />
