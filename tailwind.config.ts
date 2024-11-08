@@ -15,6 +15,10 @@ const config: Config = {
       fontFamily: {
         'ibm-mono': ['ibm-plex-mono', 'monospace']
       },
+      fontWeight: {
+        'regular': '400',
+        'bold': '800',
+      },
     },
   },
   plugins: [],
