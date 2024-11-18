@@ -53,7 +53,7 @@ This project uses a split licensing approach:
 
 - **Software**: The codebase of **sdcard.photos** is licensed under the [BSD 3-Clause License](LICENSE). You are free
   to use, modify, and distribute the software according to the terms of this license.
-- **Media**: All photographs, images, logos, and other media content hosted on **sdcard.photos** are
+- **Media**: All photographs, images, logos, and other media content (excluding react-icons assets) hosted on **sdcard.photos** are
   `Copyright (c) 2024 Jayx2u, all rights reserved.` These files require explicit permission for any use, copying,
   modification, or distribution.
 
