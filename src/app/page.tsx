@@ -1,11 +1,16 @@
+// TODO: Make nav bar
+// TODO: Add Barba.js and use for transition between homepage and blog
+// TODO: Make custom NotFound page
+
 'use client';
 import { useEffect } from 'react';
 import anime from 'animejs';
 
-import ImageSlideshow from '../components/ImageSlideshow';
-import Title from '../components/Title';
-import SubdomainList from '../components/SubdomainList';
-import Footer from '../components/Footer';
+import ImageSlideshow from '@/components/ImageSlideshow';
+import Title from '@/components/Title';
+// import Navigation from "@/components/Navigation";
+import SubdomainList from '@/components/SubdomainList';
+import Footer from '@/components/Footer';
 
 export default function Home() {
 
@@ -35,7 +40,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row justify-start min-h-screen bg-black text-white mt-16 overflow-hidden">
-      {/* Slideshow Section */}
+      {/* Slideshow & Nav Section */}
       <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-10">
         <ImageSlideshow/>
       </div>
