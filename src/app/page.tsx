@@ -1,6 +1,7 @@
 // TODO: Make nav bar
 // TODO: Add Barba.js and use for transition between homepage and blog
 // TODO: Make custom NotFound page
+// TODO: Add theme (dark/light) options -- try use shadcn?
 
 'use client';
 import { useEffect } from 'react';
