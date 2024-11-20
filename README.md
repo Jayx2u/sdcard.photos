@@ -57,6 +57,9 @@ This project uses a split licensing approach:
   `Copyright (c) 2024 Jayx2u, all rights reserved.` These files require explicit permission for any use, copying,
   modification, or distribution.
 
+*Note: Photos uploaded by members remain their exclusive property and or not covered by the BSD license. All member photos should be treated as copyrighted material. 
+Copying, downloading, or redistributing members' photos is prohibited without explicit permission from the photo owner.*
+
 ## ❤️ Acknowledgement
 
 - [sambecker/exif-photo-blog](https://github.com/sambecker/exif-photo-blog): An amazing and clean photo blog, reporting
