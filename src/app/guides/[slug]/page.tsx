@@ -1,3 +1,5 @@
+// TODO: Auto calculate reading time
+
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -71,6 +73,10 @@ export default async function GuidePage(props: Props) {
             {guide.metadata.title}
           </h1>
 
+          <h2>
+            {guide.metadata.description}
+          </h2>
+
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>{guide.metadata.author}</span>
             <span>•</span>
@@ -86,9 +92,11 @@ export default async function GuidePage(props: Props) {
           </div>
         </header>
 
+        <hr className="my-8 border-gray-600"/>
+
         <div
           className="prose prose-slate dark:prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: guide.content }}
+          dangerouslySetInnerHTML={{__html: guide.content}}
         />
       </div>
     </article>
