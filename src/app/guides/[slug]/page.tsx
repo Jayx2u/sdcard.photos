@@ -10,7 +10,7 @@ type Props = {
   params: { slug: string }
 }
 
-export async function generateMetadata({params}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const guide = await getGuideContent(params.slug);
 

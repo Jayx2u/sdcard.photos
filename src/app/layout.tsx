@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='bg-black'>
+      <body className='bg-black font-ibm-mono'>
           {children}
           <Analytics />
       </body>
