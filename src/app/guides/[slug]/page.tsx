@@ -6,13 +6,11 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge'
 
-interface Props {
-  params: {
-    slug: string;
-  }
+type Props = {
+  params: { slug: string }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   try {
     const guide = await getGuideContent(params.slug);
 
