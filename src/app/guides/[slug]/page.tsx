@@ -7,10 +7,11 @@ import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge'
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   try {
     const guide = await getGuideContent(params.slug);
 
@@ -50,7 +51,8 @@ async function getGuideContent(slug: string) {
   }
 }
 
-export default async function GuidePage({ params }: Props) {
+export default async function GuidePage(props: Props) {
+  const params = await props.params;
   const guide = await getGuideContent(params.slug)
 
   return (
