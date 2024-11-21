@@ -6,10 +6,10 @@
 'use client';
 import { useEffect } from 'react';
 import anime from 'animejs';
+//import { ThemeProvider } from "next-themes"
 
 import ImageSlideshow from '@/components/ImageSlideshow';
 import Title from '@/components/Title';
-// import Navigation from "@/components/Navigation";
 import SubdomainList from '@/components/SubdomainList';
 import Footer from '@/components/Footer';
 
