@@ -19,7 +19,8 @@ const config: Config = {
   		},
   		fontWeight: {
   			regular: '400',
-  			bold: '800'
+  			bold: '800',
+				medium: '600'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
