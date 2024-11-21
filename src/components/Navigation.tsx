@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import { Moon, Sun, Menu } from 'lucide-react';
+import { Moon, Sun, /*Menu*/ } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 import { Button } from "@/components/ui/button";
