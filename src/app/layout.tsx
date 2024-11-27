@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from 'next-themes'
 
 import { Analytics } from "@vercel/analytics/react"
 
@@ -27,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className='bg-black font-ibm-mono'>
-          {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className='font-ibm-mono dark:bg-black'>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>{children}</ThemeProvider>
           <Analytics />
       </body>
     </html>

@@ -82,7 +82,7 @@ const ImageSlideshow = () => {
   }
 
   return (
-    <div className="w-full bg-black">
+    <div className="w-full">
       <div
         ref={containerRef}
         className="max-w-6xl mx-auto px-12"

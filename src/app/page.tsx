@@ -12,6 +12,7 @@ import ImageSlideshow from '@/components/ImageSlideshow';
 import Title from '@/components/Title';
 import SubdomainList from '@/components/SubdomainList';
 import Footer from '@/components/Footer';
+import { Navigation } from '@/components/Navigation';
 
 export default function Home() {
 
@@ -40,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row justify-start min-h-screen bg-black text-white mt-16 overflow-hidden">
+    <div className="flex flex-col md:flex-row justify-start min-h-screen mt-16 overflow-hidden">
       {/* Slideshow & Nav Section */}
       <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-10">
         <ImageSlideshow/>
@@ -49,17 +50,19 @@ export default function Home() {
       {/* Text Content Section */}
       <div className="text-content opacity-0 max-w-6xl mx-auto px-12 md:w-1/2 order-2 md:order-1">
         <Title/>
-        <p className="subtitle font-ibm-mono text-lg sm:text-2xl md:text-4xl mt-2">
+        <p className="subtitle text-lg sm:text-2xl md:text-4xl mt-2">
           A photo blog for a group of friends passionate about photography.
         </p>
-        <hr className="my-8 border-gray-600"/>
+        <hr className="my-8 dark:border-gray-600 border-gray-800"/>
+        <Navigation/>
+        <hr className="my-8 dark:border-gray-600 border-gray-800"/>
         <div className="info mt-8 pb-8">
-          <p className="font-ibm-mono text-gray-400">An invite-only service where each member gets their own photo blog
+          <p className="font-ibm-mono dark:text-gray-400 text-gray-600">An invite-only service where each member gets their own photo blog
             on a unique subdomain. If you have connections to the maintainers, contact us and we&apos;ll set you up with
             a photo blog :)</p>
-          <SubdomainList />
-          <hr className="my-8 border-gray-600"/>
-          <Footer />
+          <SubdomainList/>
+          <hr className="my-8 dark:border-gray-600 border-gray-800"/>
+          <Footer/>
         </div>
       </div>
     </div>

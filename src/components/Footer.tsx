@@ -403,27 +403,27 @@ export default function Footer() {
         </svg>
       </div>
       <div className="text-left w-full">
-        <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
+        <div className="flex flex-wrap items-center gap-x-2 text-sm dark:text-gray-600 text-gray-400">
           All photos shown are from
           <a
             href="https://josh.sdcard.photos/"
-            className="hover:text-gray-400 transition-colors underline"
+            className="dark:hover:text-gray-400 hover:text-gray-600 transition-colors underline"
           >
             Josh
           </a>
         </div>
-        <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
+        <div className="flex flex-wrap items-center gap-x-2 text-sm dark:text-gray-600 text-gray-400">
           <span>Star this project on</span>
           <a
             href="https://github.com/Jayx2u/sdcard.photos"
-            className="inline-flex items-center gap-1 hover:text-gray-400 transition-colors underline"
+            className="inline-flex items-center gap-1 dark:hover:text-gray-400 hover:text-gray-600 transition-colors underline"
           >
             <IoLogoGithub className="text-lg"/>
             <span>Github!</span>
           </a>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-2 text-sm text-gray-600">
+        <div className="flex flex-wrap items-center gap-x-2 text-sm dark:text-gray-600 text-gray-400">
           <span>Maintained with</span>
           <FaHeart
             className="hover:animate-spin hover:text-red-600"
@@ -434,14 +434,14 @@ export default function Footer() {
           <div className="inline-flex flex-wrap items-center gap-x-2">
             <a
               href="https://github.com/Jayx2u"
-              className="hover:text-gray-400 transition-colors underline"
+              className="dark:hover:text-gray-400 hover:text-gray-600 transition-colors underline"
             >
               Jayx2u
             </a>
             <span>&</span>
             <a
               href="https://github.com/s1072489"
-              className="hover:text-gray-400 transition-colors underline"
+              className="dark:hover:text-gray-400 hover:text-gray-600 transition-colors underline"
             >
               Deadhello
             </a>

@@ -13,7 +13,7 @@ const SubdomainList = () => {
       <ul className="list-disc list-inside text-gray-400">
         {subdomains.map((subdomain, index) => (
           <li key={index}>
-            <a href={`https://${subdomain}`} className="font-ibm-mono text-gray-400 underline hover:font-bold">
+            <a href={`https://${subdomain}`} className="font-ibm-mono dark:text-gray-400 text-gray-600 underline hover:font-bold">
               {subdomain}
             </a>
           </li>

@@ -58,7 +58,7 @@ export default async function GuidePage(props: Props) {
   const guide = await getGuideContent(params.slug)
 
   return (
-    <article className="container font-ibm-mono text-white mx-auto px-4 py-8">
+    <article className="container font-ibm-mono mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto">
         <header className="mb-8 space-y-4">
           <div className="flex gap-2">
