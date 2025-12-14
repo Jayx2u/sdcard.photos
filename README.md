@@ -1,4 +1,4 @@
-![Banner](https://cloud-ctv2ma97y-hack-club-bot.vercel.app/0github_header.png)
+![Banner](https://github.com/Jayx2u/sdcard.photos/blob/main/public/og-image.png?raw=true)
 
 ## 🚀 About
 
