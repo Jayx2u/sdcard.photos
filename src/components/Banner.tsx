@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <aside
       aria-label="Announcement"
-      className="w-full bg-neutral-900 border-b border-neutral-800 py-2.5 px-4 text-center font-ibm-mono text-xs sm:text-sm text-gray-300 z-10"
+      className="w-full bg-neutral-900 border-b border-neutral-800 py-3 sm:py-3.5 px-4 text-center font-ibm-mono text-xs sm:text-sm text-gray-300 z-10"
     >
       Looking for the Haileybury graduation video? Check it out{' '}
       <a

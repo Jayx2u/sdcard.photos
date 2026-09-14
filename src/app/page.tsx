@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <Banner />
-      <div className="flex flex-col md:flex-row justify-start flex-1 overflow-hidden mt-6 md:mt-8">
+      <div className="flex flex-col md:flex-row justify-start flex-1 overflow-hidden mt-16">
         {/* Slideshow Section */}
         <div className="slideshow-container opacity-0 transform -translate-y-full pt-8 md:w-1/2 order-1 md:order-2 mb-10">
           <ImageSlideshow/>
