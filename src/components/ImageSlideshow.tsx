@@ -26,8 +26,8 @@ const ImageSlideshow = () => {
   useEffect(() => {
     const loadImages = async () => {
       const images = await fetchImages();
-      setSlides(images);
-      setNextImageUrl(images[1]?.url || null);
+      setSlides(images || []);
+      setNextImageUrl(images?.[1]?.url || null);
     };
 
     loadImages();
@@ -56,7 +56,7 @@ const ImageSlideshow = () => {
   };
 
   useEffect(() => {
-    if (slides.length > 0) {
+    if (slides && slides.length > 0) {
       const animate = async () => {
         await animateIn().finished;
         await new Promise(resolve => setTimeout(resolve, 5000));
@@ -71,13 +71,13 @@ const ImageSlideshow = () => {
   }, [currentIndex, slides]);
 
   useEffect(() => {
-    if (slides.length > 0) {
+    if (slides && slides.length > 0) {
       const nextIndex = (currentIndex + 1) % slides.length;
       setNextImageUrl(slides[nextIndex]?.url || null);
     }
   }, [currentIndex, slides]);
 
-  if (slides.length === 0) {
+  if (!slides || slides.length === 0 || !slides[currentIndex]) {
     return <div className="font-ibm-mono animate-pulse">Loading...</div>;
   }
 
